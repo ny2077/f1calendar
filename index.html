@@ -21,9 +21,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 48px;height:64px;d
 .nav-cta{background:var(--red);color:var(--white);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;padding:10px 20px;border:none;cursor:pointer;transition:background 0.2s;}
 .nav-cta:hover{background:var(--red-dark);}
 
-/* HERO */
 .hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:0 48px;padding-top:64px;position:relative;overflow:hidden;}
-.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(232,0,45,0.08) 0%,transparent 60%);}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(232,0,45,0.06) 0%,transparent 60%);}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.015) 1px,transparent 1px);background-size:80px 80px;}
 .hero-left{position:relative;z-index:2;}
 .hero-eyebrow{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--red);margin-bottom:20px;display:flex;align-items:center;gap:10px;}
@@ -41,34 +40,30 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 48px;height:64px;d
 .stat-num{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:32px;color:var(--white);line-height:1;}
 .stat-label{font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gray);margin-top:3px;}
 
-/* GLOBE */
-.hero-right{position:relative;height:100vh;display:flex;align-items:center;justify-content:center;}
-#globe-canvas{width:100%;height:100%;cursor:grab;}
-#globe-canvas:active{cursor:grabbing;}
-.race-tooltip{position:fixed;background:rgba(10,10,10,0.95);border:1px solid rgba(255,255,255,0.1);padding:12px 16px;pointer-events:none;opacity:0;transition:opacity 0.2s;z-index:200;min-width:180px;}
-.tooltip-round{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gray);margin-bottom:4px;}
-.tooltip-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:6px;}
-.tooltip-winner{font-size:12px;color:rgba(255,255,255,0.6);}
-.tooltip-winner strong{font-weight:600;}
-.tooltip-date{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:0.08em;color:var(--gray);margin-top:4px;}
-.tooltip-status{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:2px 8px;margin-top:6px;}
-.tooltip-hint{font-size:10px;color:rgba(255,255,255,0.25);margin-top:6px;font-style:italic;}
+.hero-right{position:relative;height:100vh;display:flex;align-items:center;justify-content:center;overflow:visible;}
+#globe-canvas{width:100%;height:100%;}
 
-/* TICKER */
+.race-tooltip{position:fixed;background:rgba(8,8,8,0.97);border:1px solid rgba(255,255,255,0.1);padding:14px 18px;pointer-events:none;opacity:0;transition:opacity 0.15s;z-index:200;min-width:200px;box-shadow:0 8px 32px rgba(0,0,0,0.6);}
+.tooltip-round{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gray);margin-bottom:4px;}
+.tooltip-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:16px;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:8px;color:var(--white);}
+.tooltip-winner{font-size:12px;color:rgba(255,255,255,0.55);margin-bottom:2px;}
+.tooltip-winner strong{font-weight:600;color:var(--white);}
+.tooltip-team{font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:6px;}
+.tooltip-date{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:0.08em;color:var(--gray);}
+.tooltip-status{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:3px 10px;margin-top:8px;border:1px solid currentColor;}
+
 .ticker{background:var(--red);padding:10px 0;overflow:hidden;white-space:nowrap;}
 .ticker-inner{display:inline-flex;animation:ticker 50s linear infinite;}
 .ticker-item{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;padding:0 32px;color:var(--white);opacity:0.9;}
 .ticker-item::after{content:'·';margin-left:32px;}
 @keyframes ticker{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
 
-/* PARTNERS */
 .partners{padding:60px 48px;border-bottom:1px solid rgba(255,255,255,0.06);}
 .partners-label{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);text-align:center;margin-bottom:32px;}
 .partners-logos{display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap;}
 .partner-logo{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:18px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.2);transition:color 0.3s;cursor:default;}
 .partner-logo:hover{color:rgba(255,255,255,0.5);}
 
-/* TEAMS */
 .teams-section{padding:100px 48px;}
 .section-eyebrow{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--red);margin-bottom:12px;display:flex;align-items:center;gap:10px;}
 .section-eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--red);}
@@ -83,7 +78,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 48px;height:64px;d
 .driver{font-size:13px;color:rgba(255,255,255,0.55);margin-top:3px;}
 .driver strong{color:var(--white);font-weight:500;}
 
-/* CALENDAR */
 .calendar-section{padding:100px 48px;background:var(--dark2);}
 .calendar-preview{margin-top:48px;border:1px solid rgba(255,255,255,0.08);}
 .calendar-header-bar{background:var(--dark3);padding:16px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,0.06);}
@@ -105,9 +99,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 48px;height:64px;d
 .status-next{color:var(--red);}
 .status-soon{color:rgba(255,255,255,0.25);}
 .sprint-badge{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;background:rgba(232,0,45,0.2);color:var(--red);padding:1px 5px;margin-left:6px;vertical-align:middle;}
-.winner-tag{font-size:11px;color:rgba(255,255,255,0.4);margin-top:2px;}
+.winner-tag{font-size:11px;color:rgba(255,255,255,0.35);margin-top:2px;}
 
-/* CTA */
 .cta-section{padding:120px 48px;position:relative;overflow:hidden;text-align:center;}
 .cta-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 100%,rgba(232,0,45,0.12) 0%,transparent 60%);}
 .cta-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(48px,7vw,88px);text-transform:uppercase;line-height:0.92;letter-spacing:-0.01em;margin-bottom:24px;position:relative;}
@@ -171,9 +164,9 @@ footer{padding:40px 48px;border-top:1px solid rgba(255,255,255,0.06);display:fle
   <div class="tooltip-round" id="tt-round"></div>
   <div class="tooltip-name" id="tt-name"></div>
   <div class="tooltip-winner" id="tt-winner"></div>
+  <div class="tooltip-team" id="tt-team"></div>
   <div class="tooltip-date" id="tt-date"></div>
   <div class="tooltip-status" id="tt-status"></div>
-  <div class="tooltip-hint" id="tt-hint"></div>
 </div>
 
 <div class="ticker">
@@ -220,7 +213,7 @@ footer{padding:40px 48px;border-top:1px solid rgba(255,255,255,0.06);display:fle
         <button class="filter-btn" onclick="filterRaces('completed',this)">Completed</button>
       </div>
     </div>
-    <div class="race-row completed" data-status="completed"><div class="race-round">R01</div><div><div class="race-name">Australian Grand Prix</div><div class="race-circuit">Albert Park Circuit · Melbourne</div><div class="winner-tag">🏆 George Russell — Mercedes</div></div><div class="race-date">6–8 Mar</div><div class="race-flag">🇦🇺</div><div class="race-status status-done">Completed</div></div>
+    <div class="race-row completed" data-status="completed"><div class="race-round">R01</div><div><div class="race-name">Australian Grand Prix</div><div class="race-circuit">Albert Park · Melbourne</div><div class="winner-tag">🏆 George Russell — Mercedes</div></div><div class="race-date">6–8 Mar</div><div class="race-flag">🇦🇺</div><div class="race-status status-done">Completed</div></div>
     <div class="race-row completed" data-status="completed"><div class="race-round">R02</div><div><div class="race-name">Chinese Grand Prix<span class="sprint-badge">Sprint</span></div><div class="race-circuit">Shanghai International Circuit</div><div class="winner-tag">🏆 Kimi Antonelli — Mercedes</div></div><div class="race-date">13–15 Mar</div><div class="race-flag">🇨🇳</div><div class="race-status status-done">Completed</div></div>
     <div class="race-row completed" data-status="completed"><div class="race-round">R03</div><div><div class="race-name">Japanese Grand Prix</div><div class="race-circuit">Suzuka International Racing Course</div><div class="winner-tag">🏆 Kimi Antonelli — Mercedes</div></div><div class="race-date">27–29 Mar</div><div class="race-flag">🇯🇵</div><div class="race-status status-done">Completed</div></div>
     <div class="race-row completed" data-status="completed"><div class="race-round">R04</div><div><div class="race-name">Miami Grand Prix</div><div class="race-circuit">Miami International Autodrome</div><div class="winner-tag">🏆 Kimi Antonelli — Mercedes</div></div><div class="race-date">1–3 May</div><div class="race-flag">🇺🇸</div><div class="race-status status-done">Completed</div></div>
@@ -264,40 +257,41 @@ footer{padding:40px 48px;border-top:1px solid rgba(255,255,255,0.06);display:fle
 </footer>
 
 <script>
-// Race data with real 2026 results
 const races = [
-  {round:'R01',name:'Australian GP',circuit:'Albert Park',country:'Australia',lat:-37.8497,lon:144.9680,status:'completed',winner:'George Russell',team:'Mercedes',teamColor:'#00D2BE',date:'6–8 Mar'},
-  {round:'R02',name:'Chinese GP',circuit:'Shanghai',country:'China',lat:31.3389,lon:121.2198,status:'completed',winner:'Kimi Antonelli',team:'Mercedes',teamColor:'#00D2BE',date:'13–15 Mar'},
-  {round:'R03',name:'Japanese GP',circuit:'Suzuka',country:'Japan',lat:34.8431,lon:136.5414,status:'completed',winner:'Kimi Antonelli',team:'Mercedes',teamColor:'#00D2BE',date:'27–29 Mar'},
-  {round:'R04',name:'Miami GP',circuit:'Miami Autodrome',country:'USA',lat:25.9581,lon:-80.2389,status:'completed',winner:'Kimi Antonelli',team:'Mercedes',teamColor:'#00D2BE',date:'1–3 May'},
-  {round:'R05',name:'Canadian GP',circuit:'Gilles Villeneuve',country:'Canada',lat:45.5000,lon:-73.5228,status:'completed',winner:'Kimi Antonelli',team:'Mercedes',teamColor:'#00D2BE',date:'22–24 May'},
+  {round:'R01',name:'Australian GP',circuit:'Albert Park · Melbourne',country:'Australia',lat:-37.8497,lon:144.9680,status:'completed',winner:'George Russell',team:'Mercedes',teamColor:'#00D2BE',date:'6–8 Mar'},
+  {round:'R02',name:'Chinese GP',circuit:'Shanghai International Circuit',country:'China',lat:31.3389,lon:121.2198,status:'completed',winner:'Kimi Antonelli',team:'Mercedes',teamColor:'#00D2BE',date:'13–15 Mar'},
+  {round:'R03',name:'Japanese GP',circuit:'Suzuka Circuit',country:'Japan',lat:34.8431,lon:136.5414,status:'completed',winner:'Kimi Antonelli',team:'Mercedes',teamColor:'#00D2BE',date:'27–29 Mar'},
+  {round:'R04',name:'Miami GP',circuit:'Miami International Autodrome',country:'USA',lat:25.9581,lon:-80.2389,status:'completed',winner:'Kimi Antonelli',team:'Mercedes',teamColor:'#00D2BE',date:'1–3 May'},
+  {round:'R05',name:'Canadian GP',circuit:'Circuit Gilles Villeneuve',country:'Canada',lat:45.5000,lon:-73.5228,status:'completed',winner:'Kimi Antonelli',team:'Mercedes',teamColor:'#00D2BE',date:'22–24 May'},
   {round:'R06',name:'Monaco GP',circuit:'Circuit de Monaco',country:'Monaco',lat:43.7338,lon:7.4211,status:'next',date:'5–7 Jun'},
   {round:'R07',name:'Spanish GP',circuit:'Barcelona-Catalunya',country:'Spain',lat:41.5700,lon:2.2611,status:'upcoming',date:'12–14 Jun'},
   {round:'R08',name:'Austrian GP',circuit:'Red Bull Ring',country:'Austria',lat:47.2197,lon:14.7647,status:'upcoming',date:'26–28 Jun'},
-  {round:'R09',name:'British GP',circuit:'Silverstone',country:'UK',lat:52.0786,lon:-1.0169,status:'upcoming',date:'3–5 Jul'},
+  {round:'R09',name:'British GP',circuit:'Silverstone Circuit',country:'UK',lat:52.0786,lon:-1.0169,status:'upcoming',date:'3–5 Jul'},
   {round:'R10',name:'Belgian GP',circuit:'Spa-Francorchamps',country:'Belgium',lat:50.4372,lon:5.9714,status:'upcoming',date:'17–19 Jul'},
   {round:'R11',name:'Hungarian GP',circuit:'Hungaroring',country:'Hungary',lat:47.5830,lon:19.2526,status:'upcoming',date:'24–26 Jul'},
-  {round:'R12',name:'Dutch GP',circuit:'Zandvoort',country:'Netherlands',lat:52.3888,lon:4.5407,status:'upcoming',date:'21–23 Aug'},
-  {round:'R13',name:'Italian GP',circuit:'Monza',country:'Italy',lat:45.6156,lon:9.2811,status:'upcoming',date:'4–6 Sep'},
+  {round:'R12',name:'Dutch GP',circuit:'Circuit Zandvoort',country:'Netherlands',lat:52.3888,lon:4.5407,status:'upcoming',date:'21–23 Aug'},
+  {round:'R13',name:'Italian GP',circuit:'Autodromo Nazionale Monza',country:'Italy',lat:45.6156,lon:9.2811,status:'upcoming',date:'4–6 Sep'},
   {round:'R14',name:'Madrid GP',circuit:'Madrid Street Circuit',country:'Spain',lat:40.4168,lon:-3.7038,status:'upcoming',date:'11–13 Sep'},
   {round:'R15',name:'Azerbaijan GP',circuit:'Baku City Circuit',country:'Azerbaijan',lat:40.3725,lon:49.8533,status:'upcoming',date:'24–26 Sep'},
-  {round:'R16',name:'Singapore GP',circuit:'Marina Bay',country:'Singapore',lat:1.2914,lon:103.8639,status:'upcoming',date:'9–11 Oct'},
+  {round:'R16',name:'Singapore GP',circuit:'Marina Bay Street Circuit',country:'Singapore',lat:1.2914,lon:103.8639,status:'upcoming',date:'9–11 Oct'},
   {round:'R17',name:'US GP',circuit:'COTA · Austin',country:'USA',lat:30.1328,lon:-97.6411,status:'upcoming',date:'23–25 Oct'},
-  {round:'R18',name:'Mexico City GP',circuit:'Hermanos Rodriguez',country:'Mexico',lat:19.4042,lon:-99.0907,status:'upcoming',date:'31 Oct–2 Nov'},
-  {round:'R19',name:'São Paulo GP',circuit:'Interlagos',country:'Brazil',lat:-23.7036,lon:-46.6997,status:'upcoming',date:'6–8 Nov'},
-  {round:'R20',name:'Las Vegas GP',circuit:'Las Vegas Strip',country:'USA',lat:36.1147,lon:-115.1728,status:'upcoming',date:'19–21 Nov'},
-  {round:'R21',name:'Qatar GP',circuit:'Losail Circuit',country:'Qatar',lat:25.4900,lon:51.4542,status:'upcoming',date:'27–29 Nov'},
-  {round:'R22',name:'Abu Dhabi GP',circuit:'Yas Marina',country:'UAE',lat:24.4672,lon:54.6031,status:'upcoming',date:'4–6 Dec'},
+  {round:'R18',name:'Mexico City GP',circuit:'Autodromo Hermanos Rodriguez',country:'Mexico',lat:19.4042,lon:-99.0907,status:'upcoming',date:'31 Oct–2 Nov'},
+  {round:'R19',name:'São Paulo GP',circuit:'Autodromo Interlagos',country:'Brazil',lat:-23.7036,lon:-46.6997,status:'upcoming',date:'6–8 Nov'},
+  {round:'R20',name:'Las Vegas GP',circuit:'Las Vegas Strip Circuit',country:'USA',lat:36.1147,lon:-115.1728,status:'upcoming',date:'19–21 Nov'},
+  {round:'R21',name:'Qatar GP',circuit:'Losail International Circuit',country:'Qatar',lat:25.4900,lon:51.4542,status:'upcoming',date:'27–29 Nov'},
+  {round:'R22',name:'Abu Dhabi GP',circuit:'Yas Marina Circuit',country:'UAE',lat:24.4672,lon:54.6031,status:'upcoming',date:'4–6 Dec'},
 ];
 
-// Three.js Globe
 const canvas = document.getElementById('globe-canvas');
 const renderer = new THREE.WebGLRenderer({canvas, antialias:true, alpha:true});
-renderer.setPixelRatio(window.devicePixelRatio);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 renderer.setClearColor(0x000000, 0);
 
 const scene = new THREE.Scene();
 const container = canvas.parentElement;
+
+const camera = new THREE.PerspectiveCamera(40, 1, 0.1, 100);
+camera.position.z = 2.6;
 
 function resize() {
   const w = container.clientWidth;
@@ -307,93 +301,115 @@ function resize() {
   camera.updateProjectionMatrix();
 }
 
-const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
-camera.position.z = 2.8;
+// Texture loader
+const loader = new THREE.TextureLoader();
+loader.crossOrigin = 'anonymous';
 
-// Globe sphere
+// Load NASA night earth texture
+const nightTexture = loader.load(
+  'https://unpkg.com/three-globe/example/img/earth-night.jpg',
+  () => { console.log('Texture loaded'); },
+  undefined,
+  () => {
+    // Fallback: generate procedural dark globe texture
+    console.log('Using fallback texture');
+  }
+);
+
 const globeGeo = new THREE.SphereGeometry(1, 64, 64);
 const globeMat = new THREE.MeshPhongMaterial({
-  color: 0x0a0a0a,
-  emissive: 0x110000,
-  specular: 0x222222,
-  shininess: 20,
-  transparent: true,
-  opacity: 0.95,
+  map: nightTexture,
+  specular: new THREE.Color(0x333333),
+  shininess: 15,
 });
 const globe = new THREE.Mesh(globeGeo, globeMat);
 scene.add(globe);
 
-// Wireframe overlay
-const wireMat = new THREE.MeshBasicMaterial({color:0x222222, wireframe:true, transparent:true, opacity:0.15});
-const wireframe = new THREE.Mesh(new THREE.SphereGeometry(1.001, 24, 24), wireMat);
-scene.add(wireframe);
-
-// Atmosphere glow
-const atmGeo = new THREE.SphereGeometry(1.08, 32, 32);
-const atmMat = new THREE.MeshBasicMaterial({color:0xE8002D, transparent:true, opacity:0.04, side:THREE.BackSide});
+// Subtle atmosphere
+const atmGeo = new THREE.SphereGeometry(1.06, 32, 32);
+const atmMat = new THREE.MeshBasicMaterial({
+  color: 0x4488ff,
+  transparent: true,
+  opacity: 0.06,
+  side: THREE.BackSide
+});
 scene.add(new THREE.Mesh(atmGeo, atmMat));
 
-// Lighting
-scene.add(new THREE.AmbientLight(0x333333));
-const dirLight = new THREE.DirectionalLight(0xffffff, 0.8);
-dirLight.position.set(2, 1, 2);
-scene.add(dirLight);
-const redLight = new THREE.PointLight(0xE8002D, 0.4, 10);
-redLight.position.set(-2, -1, 1);
-scene.add(redLight);
+// Red atmosphere glow
+const redAtmGeo = new THREE.SphereGeometry(1.1, 32, 32);
+const redAtmMat = new THREE.MeshBasicMaterial({
+  color: 0xE8002D,
+  transparent: true,
+  opacity: 0.025,
+  side: THREE.BackSide
+});
+scene.add(new THREE.Mesh(redAtmGeo, redAtmMat));
 
-// Lat/Lon to 3D
-function latLonToVec3(lat, lon, r=1.02) {
-  const phi = (90 - lat) * Math.PI / 180;
-  const theta = (lon + 180) * Math.PI / 180;
+// Lighting to match night earth
+scene.add(new THREE.AmbientLight(0x111122, 1));
+const sunLight = new THREE.DirectionalLight(0xffeedd, 0.6);
+sunLight.position.set(3, 1, 2);
+scene.add(sunLight);
+
+// Lat/Lon to 3D — corrected projection
+function latLonToVec3(lat, lon, r = 1.015) {
+  const phi = (90 - lat) * (Math.PI / 180);
+  const theta = (lon + 180) * (Math.PI / 180);
   return new THREE.Vector3(
     -r * Math.sin(phi) * Math.cos(theta),
-    r * Math.cos(phi),
-    r * Math.sin(phi) * Math.sin(theta)
+     r * Math.cos(phi),
+     r * Math.sin(phi) * Math.sin(theta)
   );
 }
 
-// Create race pins
-const pinMeshes = [];
+// Create pins
 const pinGroup = new THREE.Group();
 scene.add(pinGroup);
+const pinMeshes = [];
 
 races.forEach((race, i) => {
   const pos = latLonToVec3(race.lat, race.lon);
-  let color = 0xE8002D;
-  if (race.status === 'completed') color = parseInt(race.teamColor.replace('#',''), 16);
-  else if (race.status === 'next') color = 0xFF4444;
 
-  const geo = new THREE.SphereGeometry(0.018, 8, 8);
+  let color;
+  if (race.status === 'completed') color = 0x00D2BE; // Mercedes teal
+  else if (race.status === 'next') color = 0xFF2244;  // bright red
+  else color = 0xE8002D;                               // standard red
+
+  // Pin dot
+  const geo = new THREE.SphereGeometry(0.016, 10, 10);
   const mat = new THREE.MeshBasicMaterial({color});
   const pin = new THREE.Mesh(geo, mat);
   pin.position.copy(pos);
-  pin.userData = {race, index:i, baseColor:color, baseScale:1};
+  pin.userData = {race, baseColor: color};
   pinGroup.add(pin);
+  pinMeshes.push(pin);
 
-  // Glow ring
-  const ringGeo = new THREE.RingGeometry(0.022, 0.032, 16);
-  const ringMat = new THREE.MeshBasicMaterial({color, transparent:true, opacity:0.5, side:THREE.DoubleSide});
+  // Outer ring
+  const ringGeo = new THREE.RingGeometry(0.02, 0.028, 20);
+  const ringMat = new THREE.MeshBasicMaterial({
+    color,
+    transparent: true,
+    opacity: race.status === 'completed' ? 0.6 : 0.4,
+    side: THREE.DoubleSide
+  });
   const ring = new THREE.Mesh(ringGeo, ringMat);
   ring.position.copy(pos);
-  ring.lookAt(pos.clone().multiplyScalar(2));
-  ring.userData = {isRing:true, baseColor:color};
+  ring.lookAt(pos.clone().multiplyScalar(3));
   pinGroup.add(ring);
-
-  pinMeshes.push(pin);
 });
 
 // Interaction
 const raycaster = new THREE.Raycaster();
+raycaster.params.Points = {threshold: 0.05};
 const mouse = new THREE.Vector2();
 const tooltip = document.getElementById('tooltip');
 let hoveredPin = null;
 let isDragging = false;
 let prevMouse = {x:0, y:0};
-let rotVel = {x:0, y:0};
 let autoRotate = true;
+let rotY = 0;
 
-canvas.addEventListener('mousemove', (e) => {
+canvas.addEventListener('mousemove', e => {
   const rect = canvas.getBoundingClientRect();
   mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
   mouse.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
@@ -401,11 +417,9 @@ canvas.addEventListener('mousemove', (e) => {
   if (isDragging) {
     const dx = e.clientX - prevMouse.x;
     const dy = e.clientY - prevMouse.y;
-    rotVel.x = dy * 0.005;
-    rotVel.y = dx * 0.005;
-    globe.rotation.x += rotVel.x;
-    globe.rotation.y += rotVel.y;
-    wireframe.rotation.copy(globe.rotation);
+    globe.rotation.y += dx * 0.006;
+    globe.rotation.x += dy * 0.003;
+    globe.rotation.x = Math.max(-Math.PI/3, Math.min(Math.PI/3, globe.rotation.x));
     pinGroup.rotation.copy(globe.rotation);
     prevMouse = {x:e.clientX, y:e.clientY};
     autoRotate = false;
@@ -419,30 +433,33 @@ canvas.addEventListener('mousemove', (e) => {
     if (hoveredPin !== pin) {
       if (hoveredPin) hoveredPin.scale.setScalar(1);
       hoveredPin = pin;
-      pin.scale.setScalar(2.2);
+      pin.scale.setScalar(2.5);
       const r = pin.userData.race;
-      document.getElementById('tt-round').textContent = r.round;
+
+      document.getElementById('tt-round').textContent = r.round + ' · ' + r.country;
       document.getElementById('tt-name').textContent = r.name;
+
       if (r.status === 'completed') {
         document.getElementById('tt-winner').innerHTML = `Winner: <strong>${r.winner}</strong>`;
+        document.getElementById('tt-team').textContent = r.team;
+        document.getElementById('tt-team').style.color = r.teamColor;
         document.getElementById('tt-status').textContent = 'Completed';
-        document.getElementById('tt-status').style.background = 'rgba(0,210,190,0.15)';
         document.getElementById('tt-status').style.color = r.teamColor;
-        document.getElementById('tt-hint').textContent = '';
+        document.getElementById('tt-status').style.borderColor = r.teamColor;
       } else if (r.status === 'next') {
-        document.getElementById('tt-winner').textContent = '';
+        document.getElementById('tt-winner').textContent = 'Coming up next';
+        document.getElementById('tt-team').textContent = '';
         document.getElementById('tt-status').textContent = '▶ Next Race';
-        document.getElementById('tt-status').style.background = 'rgba(232,0,45,0.15)';
         document.getElementById('tt-status').style.color = '#E8002D';
-        document.getElementById('tt-hint').textContent = 'Coming up soon';
+        document.getElementById('tt-status').style.borderColor = '#E8002D';
       } else {
         document.getElementById('tt-winner').textContent = '';
+        document.getElementById('tt-team').textContent = '';
         document.getElementById('tt-status').textContent = 'Upcoming';
-        document.getElementById('tt-status').style.background = 'rgba(255,255,255,0.05)';
-        document.getElementById('tt-status').style.color = 'rgba(255,255,255,0.4)';
-        document.getElementById('tt-hint').textContent = '';
+        document.getElementById('tt-status').style.color = 'rgba(255,255,255,0.3)';
+        document.getElementById('tt-status').style.borderColor = 'rgba(255,255,255,0.15)';
       }
-      document.getElementById('tt-date').textContent = r.date + ' · ' + r.country;
+      document.getElementById('tt-date').textContent = r.date + ' · ' + r.circuit;
       tooltip.style.opacity = '1';
     }
     canvas.style.cursor = 'pointer';
@@ -452,18 +469,20 @@ canvas.addEventListener('mousemove', (e) => {
     canvas.style.cursor = isDragging ? 'grabbing' : 'grab';
   }
 
-  // Position tooltip
-  tooltip.style.left = (e.clientX + 16) + 'px';
-  tooltip.style.top = (e.clientY - 40) + 'px';
+  tooltip.style.left = (e.clientX + 18) + 'px';
+  tooltip.style.top = (e.clientY - 50) + 'px';
 });
 
-canvas.addEventListener('mousedown', (e) => {
+canvas.addEventListener('mousedown', e => {
   isDragging = true;
   prevMouse = {x:e.clientX, y:e.clientY};
+  canvas.style.cursor = 'grabbing';
 });
-canvas.addEventListener('mouseup', () => { isDragging = false; });
-canvas.addEventListener('mouseleave', () => {
+window.addEventListener('mouseup', () => {
   isDragging = false;
+  canvas.style.cursor = 'grab';
+});
+canvas.addEventListener('mouseleave', () => {
   tooltip.style.opacity = '0';
   if (hoveredPin) { hoveredPin.scale.setScalar(1); hoveredPin = null; }
 });
@@ -475,16 +494,16 @@ function animate() {
   t += 0.016;
 
   if (!isDragging && autoRotate) {
-    globe.rotation.y += 0.0015;
-    wireframe.rotation.y = globe.rotation.y;
+    globe.rotation.y += 0.0012;
     pinGroup.rotation.y = globe.rotation.y;
+    pinGroup.rotation.x = globe.rotation.x;
   }
 
   // Pulse pins
   pinMeshes.forEach((pin, i) => {
     if (pin !== hoveredPin) {
-      const pulse = 1 + Math.sin(t * 2 + i * 0.5) * 0.15;
-      pin.scale.setScalar(pulse);
+      const s = 1 + Math.sin(t * 2.5 + i * 0.7) * 0.18;
+      pin.scale.setScalar(s);
     }
   });
 
@@ -495,15 +514,12 @@ resize();
 window.addEventListener('resize', resize);
 animate();
 
-// Calendar filter
 function filterRaces(type, btn) {
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   document.querySelectorAll('.race-row').forEach(row => {
-    const status = row.dataset.status;
-    if(type === 'all') row.style.display = '';
-    else if(type === 'upcoming') row.style.display = status === 'upcoming' ? '' : 'none';
-    else if(type === 'completed') row.style.display = status === 'completed' ? '' : 'none';
+    const s = row.dataset.status;
+    row.style.display = type === 'all' ? '' : (s === type ? '' : 'none');
   });
 }
 </script>
